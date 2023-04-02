@@ -65,7 +65,6 @@
         "y": 360,
         "wires": [
             [
-                "85a23b6b2a5f24b1",
                 "b7ec2075f69af572",
                 "617a73f9ca71c73a"
             ]
@@ -88,25 +87,6 @@
         "x": 1010,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "85a23b6b2a5f24b1",
-        "type": "function",
-        "z": "f013711efc47a478",
-        "name": "to temp measurement",
-        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room: \"livingroom\"\n    }]\n};\n\nreturn newMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 640,
-        "y": 400,
-        "wires": [
-            [
-                "8f5eaed2e99e470c"
-            ]
-        ]
     },
     {
         "id": "83e1b959fc3b8e11",
@@ -136,11 +116,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 660,
+        "x": 620,
+        "y": 400,
         "wires": [
             [
-                "83e1b959fc3b8e11"
+                "83e1b959fc3b8e11",
+                "8f5eaed2e99e470c"
             ]
         ]
     },
