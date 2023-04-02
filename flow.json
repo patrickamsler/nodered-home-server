@@ -66,7 +66,8 @@
         "wires": [
             [
                 "617a73f9ca71c73a",
-                "85a23b6b2a5f24b1"
+                "85a23b6b2a5f24b1",
+                "b7ec2075f69af572"
             ]
         ]
     },
@@ -101,7 +102,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 930,
+        "x": 1010,
         "y": 400,
         "wires": []
     },
@@ -116,11 +117,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 500,
+        "x": 640,
+        "y": 400,
         "wires": [
             [
-                "83e1b959fc3b8e11",
                 "8f5eaed2e99e470c"
             ]
         ]
@@ -134,11 +134,31 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 880,
         "y": 540,
         "wires": []
+    },
+    {
+        "id": "b7ec2075f69af572",
+        "type": "function",
+        "z": "f013711efc47a478",
+        "name": "to temp measurement",
+        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room: msg.topic\n    }]\n};\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 660,
+        "wires": [
+            [
+                "83e1b959fc3b8e11"
+            ]
+        ]
     }
 ]
