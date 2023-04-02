@@ -112,7 +112,7 @@
         "type": "influxdb out",
         "z": "f013711efc47a478",
         "influxdb": "9671c82af601ca69",
-        "name": "influx humidity temp",
+        "name": "influx measurement humidity",
         "measurement": "humidity",
         "precision": "",
         "retentionPolicy": "",
@@ -121,7 +121,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1020,
+        "x": 1040,
         "y": 480,
         "wires": []
     },
