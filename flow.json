@@ -54,7 +54,7 @@
         "z": "f013711efc47a478",
         "name": "",
         "topic": "sensors/livingroom/status",
-        "qos": "1",
+        "qos": "2",
         "datatype": "json",
         "broker": "5a3f0328c064b5b9",
         "nl": false,
@@ -138,8 +138,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 540,
+        "x": 920,
+        "y": 660,
         "wires": []
     },
     {
