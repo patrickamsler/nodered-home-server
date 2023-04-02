@@ -121,7 +121,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1040,
+        "x": 1020,
         "y": 480,
         "wires": []
     },
