@@ -53,7 +53,7 @@
         "type": "mqtt in",
         "z": "f013711efc47a478",
         "name": "",
-        "topic": "sensors/livingroom/status",
+        "topic": "sensors/+/status",
         "qos": "2",
         "datatype": "json",
         "broker": "5a3f0328c064b5b9",
@@ -61,39 +61,22 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 210,
-        "y": 340,
+        "x": 200,
+        "y": 360,
         "wires": [
             [
-                "617a73f9ca71c73a",
                 "85a23b6b2a5f24b1",
-                "b7ec2075f69af572"
+                "b7ec2075f69af572",
+                "617a73f9ca71c73a"
             ]
         ]
-    },
-    {
-        "id": "617a73f9ca71c73a",
-        "type": "debug",
-        "z": "f013711efc47a478",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "8f5eaed2e99e470c",
         "type": "influxdb out",
         "z": "f013711efc47a478",
         "influxdb": "9671c82af601ca69",
-        "name": "influx temp measurement",
+        "name": "influx measurement temp",
         "measurement": "temperature",
         "precision": "",
         "retentionPolicy": "",
@@ -147,7 +130,7 @@
         "type": "function",
         "z": "f013711efc47a478",
         "name": "to temp measurement",
-        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room: msg.topic\n    }]\n};\n\nreturn newMsg;",
+        "func": "// extract room from topic \"sensors/livingroom/status\";\nconst room = msg.topic.split(\"/\")[1]\n\n// convert message to influx tmp measurement\nconst newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room\n    }]\n};\n\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -160,5 +143,22 @@
                 "83e1b959fc3b8e11"
             ]
         ]
+    },
+    {
+        "id": "617a73f9ca71c73a",
+        "type": "debug",
+        "z": "f013711efc47a478",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 200,
+        "wires": []
     }
 ]
