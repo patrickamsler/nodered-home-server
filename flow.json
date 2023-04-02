@@ -110,7 +110,7 @@
         "type": "function",
         "z": "f013711efc47a478",
         "name": "convert to temp measurement",
-        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.temperature\n    },\n    {\n        sensor_id: msg.clientId,\n        room: \"livingroom\"\n    }]\n};\n\nreturn newMsg;",
+        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.clientId,\n        room: \"livingroom\"\n    }]\n};\n\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
