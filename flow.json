@@ -92,14 +92,14 @@
         "id": "b7ec2075f69af572",
         "type": "function",
         "z": "f013711efc47a478",
-        "name": "to temp measurement",
+        "name": "to influx temp measurement",
         "func": "// extract room from topic \"sensors/livingroom/status\";\nconst room = msg.topic.split(\"/\")[1]\n\n// convert message to influx tmp measurement\nconst newMsg = {\n    payload : [{\n        value: msg.payload.temperature\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room\n    }]\n};\n\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 700,
         "y": 400,
         "wires": [
             [
@@ -121,7 +121,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1000,
+        "x": 1020,
         "y": 480,
         "wires": []
     },
@@ -129,14 +129,14 @@
         "id": "c79e4eb3aa477bb5",
         "type": "function",
         "z": "f013711efc47a478",
-        "name": "to temp humidity",
+        "name": "to influx humidity measurement",
         "func": "// extract room from topic \"sensors/livingroom/status\";\nconst room = msg.topic.split(\"/\")[1]\n\n// convert message to influx tmp measurement\nconst newMsg = {\n    payload : [{\n        value: msg.payload.humidity\n    },\n    {\n        sensor_id: msg.payload.client_id,\n        room\n    }]\n};\n\nreturn newMsg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 710,
         "y": 480,
         "wires": [
             [
