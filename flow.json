@@ -35,6 +35,20 @@
         "sessionExpiry": ""
     },
     {
+        "id": "9671c82af601ca69",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "home",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
         "id": "4b999eb1b4b313a9",
         "type": "mqtt in",
         "z": "f013711efc47a478",
@@ -51,7 +65,8 @@
         "y": 340,
         "wires": [
             [
-                "617a73f9ca71c73a"
+                "617a73f9ca71c73a",
+                "85a23b6b2a5f24b1"
             ]
         ]
     },
@@ -69,7 +84,60 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 620,
-        "y": 340,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8f5eaed2e99e470c",
+        "type": "influxdb out",
+        "z": "f013711efc47a478",
+        "influxdb": "9671c82af601ca69",
+        "name": "influx temperature",
+        "measurement": "temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "85a23b6b2a5f24b1",
+        "type": "function",
+        "z": "f013711efc47a478",
+        "name": "convert to temp measurement",
+        "func": "// convert message to influx tmp measurement\nlet newMsg = {\n    payload : [{\n        value: msg.temperature\n    },\n    {\n        sensor_id: msg.clientId,\n        room: \"livingroom\"\n    }]\n};\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "83e1b959fc3b8e11"
+            ]
+        ]
+    },
+    {
+        "id": "83e1b959fc3b8e11",
+        "type": "debug",
+        "z": "f013711efc47a478",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 540,
         "wires": []
     }
 ]
