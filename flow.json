@@ -160,7 +160,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payload": "hello",
-        "payloadType": "num",
+        "payloadType": "str",
         "x": 290,
         "y": 640,
         "wires": [
