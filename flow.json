@@ -143,46 +143,5 @@
                 "32a10a8b871821b8"
             ]
         ]
-    },
-    {
-        "id": "fb64f1a31c1f40e4",
-        "type": "inject",
-        "z": "f013711efc47a478",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "hello",
-        "payloadType": "str",
-        "x": 290,
-        "y": 640,
-        "wires": [
-            [
-                "764c925da4262fcb"
-            ]
-        ]
-    },
-    {
-        "id": "764c925da4262fcb",
-        "type": "debug",
-        "z": "f013711efc47a478",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 640,
-        "wires": []
     }
 ]
