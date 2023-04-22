@@ -165,35 +165,17 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 200,
-        "y": 460,
+        "x": 240,
+        "y": 160,
         "wires": [
-            [
-                "c2709b5abeadb238"
-            ]
+            []
         ]
-    },
-    {
-        "id": "c2709b5abeadb238",
-        "type": "debug",
-        "z": "1560368ebc12f603",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "fa509de288b3426b",
         "type": "mqtt out",
         "z": "1560368ebc12f603",
-        "name": "diningroom-light",
+        "name": "diningroom-light-command",
         "topic": "shellies/shelly1-C45BBE4744D5/relay/0/command",
         "qos": "1",
         "retain": "false",
@@ -203,8 +185,8 @@
         "correl": "",
         "expiry": "",
         "broker": "5a3f0328c064b5b9",
-        "x": 540,
-        "y": 620,
+        "x": 620,
+        "y": 320,
         "wires": []
     },
     {
@@ -224,8 +206,8 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 190,
-        "y": 620,
+        "x": 230,
+        "y": 320,
         "wires": [
             [
                 "fa509de288b3426b"
@@ -249,12 +231,49 @@
         "topic": "",
         "payload": "off",
         "payloadType": "str",
-        "x": 190,
-        "y": 680,
+        "x": 230,
+        "y": 380,
         "wires": [
             [
                 "fa509de288b3426b"
             ]
         ]
+    },
+    {
+        "id": "26bbb37e9f602388",
+        "type": "mqtt in",
+        "z": "1560368ebc12f603",
+        "name": "diningroom-light-status",
+        "topic": "shellies/shelly1-C45BBE4744D5/relay/0",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "5a3f0328c064b5b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "447fede174abbba7"
+            ]
+        ]
+    },
+    {
+        "id": "447fede174abbba7",
+        "type": "debug",
+        "z": "1560368ebc12f603",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 480,
+        "wires": []
     }
 ]
