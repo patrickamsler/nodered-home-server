@@ -194,7 +194,7 @@
         "type": "mqtt out",
         "z": "1560368ebc12f603",
         "name": "diningroom-light",
-        "topic": "shellies/shelly1-C45BBE4744D5/relay/0",
+        "topic": "shellies/shelly1-C45BBE4744D5/command",
         "qos": "1",
         "retain": "false",
         "respTopic": "",
