@@ -166,11 +166,9 @@
         "rh": 0,
         "inputs": 0,
         "x": 220,
-        "y": 100,
+        "y": 120,
         "wires": [
-            [
-                "2d0e3865aa79b6af"
-            ]
+            []
         ]
     },
     {
@@ -277,21 +275,5 @@
         "x": 560,
         "y": 480,
         "wires": []
-    },
-    {
-        "id": "2d0e3865aa79b6af",
-        "type": "Logger",
-        "z": "1560368ebc12f603",
-        "name": "shellies.log",
-        "count": "500",
-        "sendOutputLog": false,
-        "sendConsoleLog": false,
-        "active": true,
-        "x": 510,
-        "y": 100,
-        "wires": [
-            [],
-            []
-        ]
     }
 ]
