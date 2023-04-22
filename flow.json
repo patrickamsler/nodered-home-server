@@ -92,7 +92,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1010,
+        "x": 950,
         "y": 400,
         "wires": []
     },
@@ -107,7 +107,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
+        "x": 640,
         "y": 400,
         "wires": [
             [
@@ -129,7 +129,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1020,
+        "x": 960,
         "y": 480,
         "wires": []
     },
@@ -144,7 +144,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
+        "x": 650,
         "y": 480,
         "wires": [
             [
