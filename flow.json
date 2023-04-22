@@ -188,5 +188,48 @@
         "x": 520,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "fa509de288b3426b",
+        "type": "mqtt out",
+        "z": "1560368ebc12f603",
+        "name": "diningroom-light",
+        "topic": "shellies/shelly1-C45BBE4744D5/input/0",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a3f0328c064b5b9",
+        "x": 560,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0bd5c208cb9f79d5",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "fa509de288b3426b"
+            ]
+        ]
     }
 ]
