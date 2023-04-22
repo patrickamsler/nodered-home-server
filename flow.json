@@ -203,7 +203,7 @@
         "correl": "",
         "expiry": "",
         "broker": "5a3f0328c064b5b9",
-        "x": 560,
+        "x": 540,
         "y": 620,
         "wires": []
     },
@@ -226,6 +226,31 @@
         "payloadType": "str",
         "x": 190,
         "y": 620,
+        "wires": [
+            [
+                "fa509de288b3426b"
+            ]
+        ]
+    },
+    {
+        "id": "1e6e9b52dfb05244",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 190,
+        "y": 680,
         "wires": [
             [
                 "fa509de288b3426b"
