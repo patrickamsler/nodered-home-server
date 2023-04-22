@@ -222,7 +222,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "0",
         "payloadType": "num",
         "x": 190,
         "y": 620,
