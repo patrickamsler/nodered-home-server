@@ -157,7 +157,7 @@
         "type": "mqtt in",
         "z": "1560368ebc12f603",
         "name": "",
-        "topic": "shelly/#",
+        "topic": "shellies/#",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "5a3f0328c064b5b9",
@@ -165,7 +165,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 190,
+        "x": 200,
         "y": 460,
         "wires": [
             [
