@@ -310,5 +310,21 @@
         "x": 560,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "d03f453448543ccb",
+        "type": "debug",
+        "z": "1560368ebc12f603",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 120,
+        "wires": []
     }
 ]
