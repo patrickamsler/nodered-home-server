@@ -74,7 +74,8 @@
         "wires": [
             [
                 "b7ec2075f69af572",
-                "c79e4eb3aa477bb5"
+                "c79e4eb3aa477bb5",
+                "40337fea82c24c35"
             ]
         ]
     },
@@ -156,16 +157,17 @@
         "id": "40337fea82c24c35",
         "type": "debug",
         "z": "f013711efc47a478",
-        "name": "debug 3",
+        "name": "sensors status",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
-        "y": 220,
+        "y": 560,
         "wires": []
     },
     {
@@ -184,9 +186,7 @@
         "x": 280,
         "y": 220,
         "wires": [
-            [
-                "40337fea82c24c35"
-            ]
+            []
         ]
     },
     {
@@ -205,7 +205,9 @@
         "x": 220,
         "y": 120,
         "wires": [
-            []
+            [
+                "d03f453448543ccb"
+            ]
         ]
     },
     {
@@ -292,22 +294,25 @@
         "x": 260,
         "y": 480,
         "wires": [
-            []
+            [
+                "447fede174abbba7"
+            ]
         ]
     },
     {
         "id": "447fede174abbba7",
         "type": "debug",
         "z": "1560368ebc12f603",
-        "name": "debug 2",
+        "name": "diningroom-light-status",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
+        "x": 610,
         "y": 480,
         "wires": []
     },
@@ -315,15 +320,16 @@
         "id": "d03f453448543ccb",
         "type": "debug",
         "z": "1560368ebc12f603",
-        "name": "debug 4",
+        "name": "all shellies",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
+        "x": 490,
         "y": 120,
         "wires": []
     }
