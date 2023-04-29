@@ -283,7 +283,7 @@
         "type": "mqtt in",
         "z": "1560368ebc12f603",
         "name": "diningroom-light-status",
-        "topic": "shellies/shelly1-C45BBE4744D5/relay/0",
+        "topic": "shellies/#/relay/0",
         "qos": "1",
         "datatype": "auto-detect",
         "broker": "5a3f0328c064b5b9",
