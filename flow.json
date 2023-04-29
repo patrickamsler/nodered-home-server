@@ -468,5 +468,73 @@
                 "a7fe65bada5e8edf"
             ]
         ]
+    },
+    {
+        "id": "e06c7dfa3caf1c0c",
+        "type": "mqtt out",
+        "z": "1560368ebc12f603",
+        "name": "bedroom-light-command",
+        "topic": "shellies/shelly1-349454735FDB/relay/0/command",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a3f0328c064b5b9",
+        "x": 610,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "736059d1a9464595",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 230,
+        "y": 840,
+        "wires": [
+            [
+                "e06c7dfa3caf1c0c"
+            ]
+        ]
+    },
+    {
+        "id": "4c153525842f0992",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 230,
+        "y": 900,
+        "wires": [
+            [
+                "e06c7dfa3caf1c0c"
+            ]
+        ]
     }
 ]
