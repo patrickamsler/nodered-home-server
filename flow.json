@@ -400,5 +400,73 @@
                 "098d6452889780bf"
             ]
         ]
+    },
+    {
+        "id": "a7fe65bada5e8edf",
+        "type": "mqtt out",
+        "z": "1560368ebc12f603",
+        "name": "livingroom-light-command",
+        "topic": "shellies/shelly1-3494547359B3/relay/0/command",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a3f0328c064b5b9",
+        "x": 620,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "661028d163005f9c",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 230,
+        "y": 680,
+        "wires": [
+            [
+                "a7fe65bada5e8edf"
+            ]
+        ]
+    },
+    {
+        "id": "95452f82abbbc230",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 230,
+        "y": 740,
+        "wires": [
+            [
+                "a7fe65bada5e8edf"
+            ]
+        ]
     }
 ]
