@@ -338,7 +338,7 @@
         "type": "mqtt out",
         "z": "1560368ebc12f603",
         "name": "entrance-lightt-command",
-        "topic": "shellies/shelly1-C45BBE4744D5/relay/0/command",
+        "topic": "shellies/shelly1-349454737F5C/relay/0/command",
         "qos": "1",
         "retain": "false",
         "respTopic": "",
