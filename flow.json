@@ -536,5 +536,73 @@
                 "e06c7dfa3caf1c0c"
             ]
         ]
+    },
+    {
+        "id": "800bb814ba07cf86",
+        "type": "mqtt out",
+        "z": "1560368ebc12f603",
+        "name": "kitchen-light-command",
+        "topic": "shellies/shelly1-349454735FE0/relay/0/command",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5a3f0328c064b5b9",
+        "x": 610,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "7e94c3d44b3698ef",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 230,
+        "y": 1000,
+        "wires": [
+            [
+                "800bb814ba07cf86"
+            ]
+        ]
+    },
+    {
+        "id": "e8b974368a498fbb",
+        "type": "inject",
+        "z": "1560368ebc12f603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 230,
+        "y": 1060,
+        "wires": [
+            [
+                "800bb814ba07cf86"
+            ]
+        ]
     }
 ]
