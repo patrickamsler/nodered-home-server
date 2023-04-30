@@ -74,8 +74,7 @@
         "wires": [
             [
                 "b7ec2075f69af572",
-                "c79e4eb3aa477bb5",
-                "40337fea82c24c35"
+                "c79e4eb3aa477bb5"
             ]
         ]
     },
@@ -187,6 +186,27 @@
         "y": 220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ac337fbf8ed490fd",
+        "type": "mqtt in",
+        "z": "f013711efc47a478",
+        "name": "",
+        "topic": "devices/livingroom/sensors/status",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "5a3f0328c064b5b9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 640,
+        "wires": [
+            [
+                "40337fea82c24c35"
+            ]
         ]
     },
     {
