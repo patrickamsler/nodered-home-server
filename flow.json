@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "cb0a1d4a578a8736",
+        "type": "tab",
+        "label": "HA Test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "5a3f0328c064b5b9",
         "type": "mqtt-broker",
         "name": "localhost",
@@ -55,6 +63,121 @@
         "influxdbVersion": "1.x",
         "url": "http://localhost:8086",
         "rejectUnauthorized": true
+    },
+    {
+        "id": "7d1f07f6455a0fd3",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
+    },
+    {
+        "id": "10373df48fd61442",
+        "type": "ha-device-config",
+        "name": "Test Switch",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "105de333f4cff3d6",
+        "type": "ha-entity-config",
+        "server": "7d1f07f6455a0fd3",
+        "deviceConfig": "10373df48fd61442",
+        "name": "",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "0617d8c125a3a60b",
+        "type": "ha-device-config",
+        "name": "Test Sensor",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "",
+        "swVersion": ""
+    },
+    {
+        "id": "4c5a18b3b9fb979c",
+        "type": "ha-entity-config",
+        "server": "7d1f07f6455a0fd3",
+        "deviceConfig": "0617d8c125a3a60b",
+        "name": "",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
     },
     {
         "id": "4b999eb1b4b313a9",
