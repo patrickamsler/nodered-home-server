@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "cb0a1d4a578a8736",
-        "type": "tab",
-        "label": "HA Test",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "5a3f0328c064b5b9",
         "type": "mqtt-broker",
         "name": "localhost",
