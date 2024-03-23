@@ -268,28 +268,11 @@
         ]
     },
     {
-        "id": "40337fea82c24c35",
-        "type": "debug",
-        "z": "f013711efc47a478",
-        "name": "sensors status",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "76f048cd0956fc48",
         "type": "mqtt in",
         "z": "f013711efc47a478",
         "name": "",
-        "topic": "devices/livingroom/sensors/status",
+        "topic": "devices/+/sensors/status",
         "qos": "2",
         "datatype": "json",
         "broker": "5a3f0328c064b5b9",
@@ -297,32 +280,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 280,
+        "x": 250,
         "y": 220,
         "wires": [
             [
                 "719679cd4c6b672f"
-            ]
-        ]
-    },
-    {
-        "id": "ac337fbf8ed490fd",
-        "type": "mqtt in",
-        "z": "f013711efc47a478",
-        "name": "",
-        "topic": "devices/ref/sensors/status",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "5a3f0328c064b5b9",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 230,
-        "y": 640,
-        "wires": [
-            [
-                "40337fea82c24c35"
             ]
         ]
     },
